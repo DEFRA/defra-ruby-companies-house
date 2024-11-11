@@ -47,11 +47,11 @@ module DefraRuby
 
       attr_accessor :company_number
 
-      def self.run(company_number)
-        new.run(company_number)
+      def self.run(company_number:)
+        new.run(company_number:)
       end
 
-      def run(company_number)
+      def run(company_number:)
         @company_number = format_company_number(company_number)
         validate_company_number
 
@@ -93,9 +93,7 @@ module DefraRuby
       end
 
       def companies_house_endpoint
-        @companies_house_host ||= DefraRuby::CompaniesHouse.configuration.companies_house_host
-
-        "#{@companies_house_host}/company/#{company_number}"
+        "#{DefraRuby::CompaniesHouse.configuration.companies_house_host}/company/#{company_number}"
       end
 
       def api_key

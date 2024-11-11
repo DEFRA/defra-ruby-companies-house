@@ -5,7 +5,7 @@ require "defra_ruby/companies_house/api"
 
 RSpec.describe DefraRuby::CompaniesHouse::API do
 
-  subject(:companies_house_response) { described_class.run(company_number) }
+  subject(:companies_house_response) { described_class.run(company_number:) }
 
   let(:companies_house_endpoint) { "#{DefraRuby::CompaniesHouse.configuration.companies_house_host}/company" }
   let(:valid_company_number) { "00987654" }
@@ -43,7 +43,7 @@ RSpec.describe DefraRuby::CompaniesHouse::API do
     end
   end
 
-  context "when the API request times out" do
+  context "when the Companies House API request times out" do
     before { stub_request(:get, %r{#{companies_house_endpoint}/*}).to_timeout }
 
     it { expect { companies_house_response }.to raise_error(DefraRuby::CompaniesHouse::ApiTimeoutError) }
@@ -51,7 +51,7 @@ RSpec.describe DefraRuby::CompaniesHouse::API do
     it_behaves_like "Airbrake notifications"
   end
 
-  context "when the API returns an error" do
+  context "when the Companies House API returns an error" do
     before { stub_request(:get, %r{#{companies_house_endpoint}/*}).to_raise(SocketError) }
 
     it { expect { companies_house_response }.to raise_error(StandardError) }
