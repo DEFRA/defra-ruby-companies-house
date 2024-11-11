@@ -35,7 +35,7 @@ RSpec.describe DefraRuby::CompaniesHouse::API do
         allow(Airbrake).to receive(:notify)
       end
 
-      it "Airbrake notifications" do
+      it "notifies Airbrake" do
         companies_house_response
       rescue StandardError # expected exception
         expect(Airbrake).to have_received(:notify)

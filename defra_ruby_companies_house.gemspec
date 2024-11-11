@@ -30,6 +30,9 @@ Gem::Specification.new do |spec|
   # require MFA to push to RubyGems.org
   spec.metadata["rubygems_mfa_required"] = "true"
 
+  # Internationalisation
+  spec.add_dependency "i18n"
+
   # Use rest-client for external requests
   spec.add_dependency "rest-client", "~> 2.0"
 end

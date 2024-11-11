@@ -9,12 +9,12 @@ module DefraRuby
   module CompaniesHouse
 
     # https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/426891/uniformResourceIdentifiersCustomerGuide.pdf
-    VALID_COMPANY_NUMBER_NUMBER_REGEX = /\A(\d{8,8}$)|([a-zA-Z]{2}\d{6}$)|([a-zA-Z]{2}\d{5}[a-zA-Z]{1}$)\z/i
+    VALID_COMPANY_NUMBER_REGEX = /\A(\d{8,8}$)|([a-zA-Z]{2}\d{6}$)|([a-zA-Z]{2}\d{5}[a-zA-Z]{1}$)\z/i
 
     # Custom error classes to handle Companies House API errors
     class ApiTimeoutError < StandardError
       def message
-        "Companies House API timeout"
+        I18n.t(".defra_ruby.companies_house.errors.timeout")
       end
     end
 
@@ -25,7 +25,7 @@ module DefraRuby
       end
 
       def message
-        "Invalid company number: #{@company_number}"
+        I18n.t(".defra_ruby.companies_house.errors.invalid_company_number", company_number: @company_number)
       end
     end
 
@@ -36,7 +36,7 @@ module DefraRuby
       end
 
       def message
-        "Company not found: #{@company_number}"
+        I18n.t(".defra_ruby.companies_house.errors.company_not_found", company_number: @company_number)
       end
     end
 
@@ -114,7 +114,7 @@ module DefraRuby
       # rubocop:enable Naming/VariableNumber
 
       def validate_company_number
-        return if company_number.match?(VALID_COMPANY_NUMBER_NUMBER_REGEX) && !company_number.match(/^0+$/)
+        return if company_number.match?(VALID_COMPANY_NUMBER_REGEX) && !company_number.match(/^0+$/)
 
         error = DefraRuby::CompaniesHouse::InvalidCompanyNumberError.new(company_number)
 

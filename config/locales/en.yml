@@ -1,0 +1,7 @@
+en:
+  defra_ruby:
+    companies_house:
+      errors:
+        timeout: Companies House API timeout
+        invalid_company_number: "Invalid company number: %{company_number}"
+        company_not_found: "Company not found: %{company_number}"
