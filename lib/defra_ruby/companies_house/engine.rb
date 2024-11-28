@@ -12,7 +12,7 @@ module DefraRuby
       # This means values in the host app can override those in the engine
       config.before_initialize do
         # engine_locales = Dir["#{config.root}/config/locales/**/*.yml"]
-        engine_locales = Dir.glob( File.dirname(__FILE__) + "lib/locales/*.{rb,yml}" ) 
+        engine_locales = Dir.glob("#{File.dirname(__FILE__)}lib/locales/*.{rb,yml}")
         config.i18n.load_path = engine_locales + config.i18n.load_path
       end
     end
