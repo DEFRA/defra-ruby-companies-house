@@ -103,6 +103,7 @@ module DefraRuby
       # rubocop:disable Naming/VariableNumber
       def registered_office_address_lines
         address = companies_house_api_response[:registered_office_address]
+        return [] unless address.keys.length.positive?
 
         [
           address[:address_line_1],
