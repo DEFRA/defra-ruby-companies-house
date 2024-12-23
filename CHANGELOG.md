@@ -4,9 +4,17 @@
 
 [Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.0...HEAD)
 
+**Implemented enhancements:**
+
+- Handle Companies House API responses without an address [\#4](https://github.com/DEFRA/defra-ruby-companies-house/pull/4) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
+
 **Fixed bugs:**
 
 - Handle CH API response with no address [\#2](https://github.com/DEFRA/defra-ruby-companies-house/pull/2) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
+
+**Merged pull requests:**
+
+- Release/v1.0.1 [\#3](https://github.com/DEFRA/defra-ruby-companies-house/pull/3) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 
 ## [v1.0.0](https://github.com/defra/defra-ruby-companies-house/tree/v1.0.0) (2024-11-28)
 
