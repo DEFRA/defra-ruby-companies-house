@@ -127,7 +127,7 @@ module DefraRuby
       end
 
       def log_error(error)
-        logged_error = "Error getting details for company \"#{company_number}\": #{error}"
+        logged_error = "Error (#{error.class}) getting details for company \"#{company_number}\": #{error}"
         DefraRuby::CompaniesHouse.logger.error logged_error
         Airbrake.notify(logged_error) if defined?(Airbrake)
       end
