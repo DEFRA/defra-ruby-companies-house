@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/defra/defra-ruby-companies-house/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.0...HEAD)
+[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.2...HEAD)
+
+**Merged pull requests:**
+
+- Log exception class [\#6](https://github.com/DEFRA/defra-ruby-companies-house/pull/6) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
+
+## [v1.0.2](https://github.com/defra/defra-ruby-companies-house/tree/v1.0.2) (2024-12-23)
+
+[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.0...v1.0.2)
 
 **Implemented enhancements:**
 
@@ -14,6 +22,7 @@
 
 **Merged pull requests:**
 
+- Release/v1.0.2 [\#5](https://github.com/DEFRA/defra-ruby-companies-house/pull/5) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 - Release/v1.0.1 [\#3](https://github.com/DEFRA/defra-ruby-companies-house/pull/3) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 
 ## [v1.0.0](https://github.com/defra/defra-ruby-companies-house/tree/v1.0.0) (2024-11-28)
