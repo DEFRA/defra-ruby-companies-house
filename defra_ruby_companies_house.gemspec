@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Defra ruby on rails helper for Companies House API"
   spec.description   = "Single point of access to the Companies House API with associated " \
                        "error handling, used in Defra Rails based digital services"
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = ">= 3.2"
 
   spec.files = Dir["{bin,config,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
