@@ -100,7 +100,7 @@ module DefraRuby
         DefraRuby::CompaniesHouse.configuration.companies_house_api_key
       end
 
-      # rubocop:disable Naming/VariableNumber
+      # rubocop:disable-next Naming/VariableNumber
       def registered_office_address_lines
         address = companies_house_api_response[:registered_office_address]
 
@@ -111,7 +111,6 @@ module DefraRuby
           address&.dig(:postal_code)
         ].compact
       end
-      # rubocop:enable Naming/VariableNumber
 
       def validate_company_number
         return if company_number.match?(VALID_COMPANY_NUMBER_REGEX) && !company_number.match(/^0+$/)
