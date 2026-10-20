@@ -86,6 +86,19 @@ RSpec.describe DefraRuby::CompaniesHouse::API do
     it { expect(companies_house_response[:company_status]).to eq :inactive }
   end
 
+  context "when the company has no status (e.g. Registered Society)" do
+    before do
+      stub_request(:get, %r{#{companies_house_endpoint}/[a-zA-Z\d]{8}}).to_return(
+        status: 200,
+        body: File.read("spec/fixtures/files/registered_society_response.json")
+      )
+    end
+
+    it { expect(companies_house_response[:company_status]).to be_nil }
+    it { expect(companies_house_response[:company_name]).to eq "EXAMPLE REGISTERED SOCIETY LIMITED" }
+    it { expect(companies_house_response[:company_type]).to eq :"registered-society-non-jurisdictional" }
+  end
+
   context "when the company is active" do
 
     shared_examples "returns a valid result" do
