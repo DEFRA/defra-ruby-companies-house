@@ -1,0 +1,23 @@
+{
+  "jurisdiction":"england-wales",
+  "registered_office_address":{
+     "address_line_1":"1 Society Road",
+     "address_line_2":"Industrial Estate",
+     "postal_code":"AB1 2CD",
+     "locality":"Somewhere"
+  },
+  "date_of_creation":"1995-03-15",
+  "company_name":"EXAMPLE REGISTERED SOCIETY LIMITED",
+  "type":"registered-society-non-jurisdictional",
+  "undeliverable_registered_office_address":false,
+  "has_been_liquidated":false,
+  "company_number":"IP27789R",
+  "etag":"2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b",
+  "has_insolvency_history":false,
+  "links":{
+     "self":"/company/IP27789R",
+     "filing_history":"/company/IP27789R/filing-history"
+  },
+  "registered_office_is_in_dispute":false,
+  "can_file":true
+}

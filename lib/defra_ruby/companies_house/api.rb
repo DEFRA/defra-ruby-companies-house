@@ -75,8 +75,8 @@ module DefraRuby
       def companies_house_details
         @companies_house_details ||= {
           company_name: companies_house_api_response[:company_name],
-          company_type: companies_house_api_response[:type].to_sym,
-          company_status: companies_house_api_response[:company_status].to_sym,
+          company_type: companies_house_api_response[:type]&.to_sym,
+          company_status: companies_house_api_response[:company_status]&.to_sym,
           registered_office_address: registered_office_address_lines
         }
       end
