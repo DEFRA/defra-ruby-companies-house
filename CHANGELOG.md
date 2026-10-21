@@ -2,10 +2,23 @@
 
 ## [Unreleased](https://github.com/defra/defra-ruby-companies-house/tree/HEAD)
 
-[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.2...HEAD)
+[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.3...HEAD)
+
+**Implemented enhancements:**
+
+- \[RUBY-4520\]  Fix nil company\_status for registered societies [\#9](https://github.com/DEFRA/defra-ruby-companies-house/pull/9) ([tobyprivett](https://github.com/tobyprivett))
 
 **Merged pull requests:**
 
+- Upgrade .ruby\_version to 3.4.6 [\#8](https://github.com/DEFRA/defra-ruby-companies-house/pull/8) ([tobyprivett](https://github.com/tobyprivett))
+
+## [v1.0.3](https://github.com/defra/defra-ruby-companies-house/tree/v1.0.3) (2024-12-31)
+
+[Full Changelog](https://github.com/defra/defra-ruby-companies-house/compare/v1.0.2...v1.0.3)
+
+**Merged pull requests:**
+
+- Release/v1.0.3 [\#7](https://github.com/DEFRA/defra-ruby-companies-house/pull/7) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 - Log exception class [\#6](https://github.com/DEFRA/defra-ruby-companies-house/pull/6) ([PaulDoyle-EA](https://github.com/PaulDoyle-EA))
 
 ## [v1.0.2](https://github.com/defra/defra-ruby-companies-house/tree/v1.0.2) (2024-12-23)
